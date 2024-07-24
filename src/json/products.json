@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "title": "UDATE",
+    "description": "update.",
+    "code": "RI20023123",
+    "price": 45.99,
+    "status": true,
+    "stock": 150,
+    "category": "Accesorios",
+    "thumbnails": [
+      "imagenes/raton_inalambrico_1.jpg",
+      "imagenes/raton_inalambrico_2.jpg",
+      "upadte"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "UDATE",
+    "description": "update.",
+    "code": "RI20023123",
+    "price": 45.99,
+    "status": true,
+    "stock": 150,
+    "category": "Accesorios",
+    "thumbnails": [
+      "imagenes/raton_inalambrico_1.jpg",
+      "imagenes/raton_inalambrico_2.jpg",
+      "upadte"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Altavoz Bluetooth",
+    "description": "Altavoz portátil Bluetooth con excelente calidad de sonido.",
+    "code": "AB4004",
+    "price": 79.99,
+    "status": true,
+    "stock": 75,
+    "category": "Audio",
+    "thumbnails": [
+      "imagenes/altavoz_bluetooth_1.jpg",
+      "imagenes/altavoz_bluetooth_2.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Teclado para Juegos",
+    "description": "Teclado mecánico para juegos con iluminación RGB.",
+    "code": "TG5005",
+    "price": 129.99,
+    "status": true,
+    "stock": 100,
+    "category": "Accesorios",
+    "thumbnails": [
+      "imagenes/teclado_juegos_1.jpg",
+      "imagenes/teclado_juegos_2.jpg"
+    ]
+  },
+  {
+    "title": "Laptop Pro3",
+    "description": "Una laptop de alto rendimiento para profesionales.",
+    "code": "11111",
+    "price": 1500,
+    "status": true,
+    "stock": 25,
+    "category": "Electrónica",
+    "thumbnails": [
+      "imagenes/laptop_pro_1.jpg",
+      "imagenes/laptop_pro_2.jpg"
+    ],
+    "id": 6
+  },
+  {
+    "title": "ADD ROUTES 4",
+    "description": "NUEVE",
+    "code": "9746246765",
+    "price": 1500,
+    "status": true,
+    "stock": 25,
+    "category": "oTRA CATGORIA",
+    "thumbnails": [
+      "dasdasdasd, dadasdsad"
+    ],
+    "id": 7
+  }
+]
