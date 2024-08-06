@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "title": "UDATE",
-    "description": "update.",
+    "title": "Ratón Inalámbrico",
+    "description": "Ratón inalámbrico ergonómico con sensor óptico.",
     "code": "RI20023123",
     "price": 45.99,
     "status": true,
@@ -11,77 +11,127 @@
     "thumbnails": [
       "imagenes/raton_inalambrico_1.jpg",
       "imagenes/raton_inalambrico_2.jpg",
-      "upadte"
+      "imagenes/raton_inalambrico_3.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Teclado Mecánico",
+    "description": "Teclado mecánico retroiluminado con switches rojos.",
+    "code": "TM20223456",
+    "price": 89.99,
+    "status": true,
+    "stock": 75,
+    "category": "Accesorios",
+    "thumbnails": [
+      "imagenes/teclado_mecanico_1.jpg",
+      "imagenes/teclado_mecanico_2.jpg",
+      "imagenes/teclado_mecanico_3.jpg"
     ]
   },
   {
     "id": 3,
-    "title": "UDATE",
-    "description": "update.",
-    "code": "RI20023123",
-    "price": 45.99,
+    "title": "Monitor 4K",
+    "description": "Monitor 4K UHD de 27 pulgadas con HDR.",
+    "code": "M427UHD",
+    "price": 399.99,
     "status": true,
-    "stock": 150,
-    "category": "Accesorios",
+    "stock": 50,
+    "category": "Electrónica",
     "thumbnails": [
-      "imagenes/raton_inalambrico_1.jpg",
-      "imagenes/raton_inalambrico_2.jpg",
-      "upadte"
+      "imagenes/monitor_4k_1.jpg",
+      "imagenes/monitor_4k_2.jpg",
+      "imagenes/monitor_4k_3.jpg"
     ]
   },
   {
     "id": 4,
-    "title": "Altavoz Bluetooth",
-    "description": "Altavoz portátil Bluetooth con excelente calidad de sonido.",
-    "code": "AB4004",
-    "price": 79.99,
+    "title": "Auriculares Bluetooth",
+    "description": "Auriculares inalámbricos con cancelación de ruido.",
+    "code": "AB4005656",
+    "price": 129.99,
     "status": true,
-    "stock": 75,
+    "stock": 200,
     "category": "Audio",
     "thumbnails": [
-      "imagenes/altavoz_bluetooth_1.jpg",
-      "imagenes/altavoz_bluetooth_2.jpg"
+      "imagenes/auriculares_bluetooth_1.jpg",
+      "imagenes/auriculares_bluetooth_2.jpg",
+      "imagenes/auriculares_bluetooth_3.jpg"
     ]
   },
   {
     "id": 5,
-    "title": "Teclado para Juegos",
-    "description": "Teclado mecánico para juegos con iluminación RGB.",
-    "code": "TG5005",
-    "price": 129.99,
+    "title": "Smartphone",
+    "description": "Teléfono inteligente con pantalla AMOLED y 128GB de almacenamiento.",
+    "code": "SM8002341",
+    "price": 599.99,
     "status": true,
     "stock": 100,
-    "category": "Accesorios",
+    "category": "Electrónica",
     "thumbnails": [
-      "imagenes/teclado_juegos_1.jpg",
-      "imagenes/teclado_juegos_2.jpg"
+      "imagenes/smartphone_1.jpg",
+      "imagenes/smartphone_2.jpg",
+      "imagenes/smartphone_3.jpg"
     ]
   },
   {
-    "title": "Laptop Pro3",
-    "description": "Una laptop de alto rendimiento para profesionales.",
-    "code": "11111",
-    "price": 1500,
+    "id": 6,
+    "title": "Tablet",
+    "description": "Tablet de 10 pulgadas con 64GB de almacenamiento.",
+    "code": "TB1001234",
+    "price": 299.99,
     "status": true,
-    "stock": 25,
+    "stock": 120,
     "category": "Electrónica",
     "thumbnails": [
-      "imagenes/laptop_pro_1.jpg",
-      "imagenes/laptop_pro_2.jpg"
-    ],
-    "id": 6
+      "imagenes/tablet_1.jpg",
+      "imagenes/tablet_2.jpg",
+      "imagenes/tablet_3.jpg"
+    ]
   },
   {
-    "title": "ADD ROUTES 4",
-    "description": "NUEVE",
-    "code": "9746246765",
-    "price": 1500,
+    "id": 7,
+    "title": "Cámara DSLR",
+    "description": "Cámara réflex digital con lente de 18-55mm.",
+    "code": "CDSR1834",
+    "price": 749.99,
     "status": true,
-    "stock": 25,
-    "category": "oTRA CATGORIA",
+    "stock": 30,
+    "category": "Fotografía",
     "thumbnails": [
-      "dasdasdasd, dadasdsad"
-    ],
-    "id": 7
+      "imagenes/camara_dslr_1.jpg",
+      "imagenes/camara_dslr_2.jpg",
+      "imagenes/camara_dslr_3.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Impresora Láser",
+    "description": "Impresora láser monocromática con Wi-Fi.",
+    "code": "ILM500123",
+    "price": 199.99,
+    "status": true,
+    "stock": 60,
+    "category": "Oficina",
+    "thumbnails": [
+      "imagenes/impresora_laser_1.jpg",
+      "imagenes/impresora_laser_2.jpg",
+      "imagenes/impresora_laser_3.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Altavoz Inteligente",
+    "description": "Altavoz inteligente con asistente de voz integrado.",
+    "code": "AI3007854",
+    "price": 99.99,
+    "status": true,
+    "stock": 180,
+    "category": "Audio",
+    "thumbnails": [
+      "imagenes/altavoz_inteligente_1.jpg",
+      "imagenes/altavoz_inteligente_2.jpg",
+      "imagenes/altavoz_inteligente_3.jpg"
+    ]
   }
 ]

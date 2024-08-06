@@ -1,5 +1,5 @@
 import { Router } from "express";
-import ProductManager from '../productManager.js';
+import ProductManager from '../managers/productManager.js';
 
 
 const router = Router();
@@ -12,7 +12,7 @@ const manager = new ProductManager('./src/json/products.json');
             const productArray = await manager.getProducts();
 
             if (!limit || limit <= 0 || limit > productArray.length) {
-                res.status(200).json(productArray);
+                res.render('home', productArray);
             } else {
                 const limitProductArray = productArray.slice(0, limit);
                 res.status(200).json(limitProductArray);

@@ -1,0 +1,47 @@
+<div id="container" class="cont_cards" >
+
+</div>
+
+
+
+<div class="form-container">
+    <h1>Agregar Producto</h1>
+    <form id="product_form" method="post">
+     
+      <label for="category">Categoría:</label>
+      <select id="form_category" name="category" required>
+        <option value="Accesorios">Accesorios</option>
+        <option value="Electrónica">Electrónica</option>
+        <option value="Audio">Audio</option>
+        <option value="Fotografía">Fotografía</option>
+        <option value="Oficina">Oficina</option>
+      </select>
+
+
+      <input  id="form_id" name="title" type="hidden">
+
+      <label for="title">Título:</label>
+      <input type="text" id="form_title" name="title" >
+
+      <label for="description">Descripción:</label>
+      <textarea id="form_description" name="description" ></textarea>
+
+      <label for="code">Código:</label>
+      <input type="text" id="form_code" name="code" >
+
+      <label for="price">Precio:</label>
+      <input type="number" id="form_price" name="price" step="0.01" >
+
+      <label for="status">Estado:</label>
+      <input type="checkbox" id="form_status" name="status" checked> Activo
+
+      <label for="stock">Stock:</label>
+      <input type="number" id="form_stock" name="stock" >
+
+
+      <input  id= "boton_agregar" value="Agregar Producto">
+    </form>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+<script src="../../js/main.js"></script>
