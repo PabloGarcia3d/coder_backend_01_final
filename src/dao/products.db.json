@@ -1,0 +1,67 @@
+[
+    {
+        "title": "Ratón Inalámbrico",
+        "description": "Ratón ergonómico inalámbrico con sensor de 1600 DPI y larga duración de batería.",
+        "price": 29.99,
+        "code": "RI1234",
+        "stock": 150,
+        "category": "Electrónica",
+        "status": true,
+        "thumbnails": [
+            "https://ejemplo.com/imagenes/raton-inalambrico-frontal.jpg",
+            "https://ejemplo.com/imagenes/raton-inalambrico-lateral.jpg"
+        ]
+    },
+    {
+        "title": "Auriculares Bluetooth",
+        "description": "Auriculares Bluetooth de diadema con cancelación de ruido y 20 horas de duración de batería.",
+        "price": 89.99,
+        "code": "AB5678",
+        "stock": 75,
+        "category": "Electrónica",
+        "status": true,
+        "thumbnails": [
+            "https://ejemplo.com/imagenes/auriculares-bluetooth-frontal.jpg",
+            "https://ejemplo.com/imagenes/auriculares-bluetooth-lateral.jpg"
+        ]
+    },
+    {
+        "title": "Teclado Mecánico",
+        "description": "Teclado mecánico RGB con interruptores Cherry MX y reposamuñecas desmontable.",
+        "price": 129.99,
+        "code": "TM9101",
+        "stock": 60,
+        "category": "Electrónica",
+        "status": true,
+        "thumbnails": [
+            "https://ejemplo.com/imagenes/teclado-mecanico-frontal.jpg",
+            "https://ejemplo.com/imagenes/teclado-mecanico-lateral.jpg"
+        ]
+    },
+    {
+        "title": "Monitor 4K UHD",
+        "description": "Monitor 4K UHD de 27 pulgadas con tecnología IPS y HDR10.",
+        "price": 349.99,
+        "code": "M4KU1122",
+        "stock": 30,
+        "category": "Electrónica",
+        "status": true,
+        "thumbnails": [
+            "https://ejemplo.com/imagenes/monitor-4k-uhd-frontal.jpg",
+            "https://ejemplo.com/imagenes/monitor-4k-uhd-lateral.jpg"
+        ]
+    },
+    {
+        "title": "Disco Duro Externo",
+        "description": "Disco duro externo de 2TB con conectividad USB 3.0 y diseño resistente.",
+        "price": 79.99,
+        "code": "DDE3344",
+        "stock": 200,
+        "category": "Almacenamiento",
+        "status": true,
+        "thumbnails": [
+            "https://ejemplo.com/imagenes/disco-duro-externo-frontal.jpg",
+            "https://ejemplo.com/imagenes/disco-duro-externo-lateral.jpg"
+        ]
+    }
+]

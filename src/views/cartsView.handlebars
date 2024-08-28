@@ -1,0 +1,61 @@
+
+
+<h1>Carrito</h1>
+
+<button onclick="vaciar_carrito()">Vaciar Carrito</button>
+
+
+<div id="container" class="cont_cards" >
+
+
+  {{#each data}}
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body" >
+      <h5 class="card-title">{{this.id_product.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{this.id_product.category}}</h6>
+      <p class="card-text">code: {{this.id_product.code}}</p>
+      <p class="card-text">price: {{this.id_product.price}}</p>
+      <div class="quantity">
+      <p class="card-text">quantity: <b> {{this.quantity}}</b></p>
+       </div>   
+    </div>
+  </div>
+
+  {{/each}}
+
+</div>
+
+
+
+
+
+<script>
+
+  function vaciar_carrito() {
+    const confirmar = confirm('¿Estás seguro de que deseas vaciar el carrito?');
+
+    if (confirmar) {
+      const url = 'http://localhost:3000/api/carts/66ce1f9862b8d53ecb7198fe';
+
+      fetch(url, {
+        method: 'DELETE'
+      })
+      .then(response => {
+        if (response.ok) {
+          alert('Carrito vaciado con éxito.');
+          location.reload();
+   
+        } else {
+          alert('Error al vaciar el carrito.');
+        }
+      })
+      .catch(error => console.error('Error:', error));
+    } else {
+      alert('Operación cancelada.');
+    }
+  }
+
+
+
+</script>

@@ -4,9 +4,9 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+  
   }
 
 .cont_cards{
@@ -16,6 +16,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 
 }
 .card{
@@ -97,4 +98,82 @@ body {
   }
   #boton_agregar:hover {
     background-color: #218838;
+  }
+  .filtros{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content:space-around;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .paginador{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cont_paginador{
+
+    margin: 25px;
+  }
+
+  .agregar_carrito{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #c71728;
+    background-image: url(../img/add-to-cart.png);
+    background-repeat: no-repeat;
+    background-size:60%;
+    background-position: center;
+    cursor: pointer;
+
+  }
+
+  .agregar_carrito:hover{
+
+    background-color: #1d17c7; 
+  }
+
+  .btn_carrito{
+
+    width: 150px;
+    height: 30px;
+    background-color: #3717c7;
+  
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+   text-decoration: none;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+  
+  }
+
+  
+  .btn_carrito:hover{
+
+    background-color: #c71728;
+  
+  }
+
+  .quantity{
+
+    background-color: #1717c7;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  h1{
+
+    margin-bottom: 50px;
   }

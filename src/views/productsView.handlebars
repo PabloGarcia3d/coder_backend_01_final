@@ -1,0 +1,215 @@
+
+<div class="filtros ">
+    <h2>Filtros de Productos</h2>
+    <form id="filterForm" method="GET">
+      <div class="row">
+        <!-- Filtro por Categoría -->
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="category">Categoría</label>
+            <select id="categorySelect" name="category" class="form-control">
+              <option value="">Seleccionar Categoría</option>
+              <option value="Almacenamiento">Almacenamiento</option>
+              <option value="Electrónica">Electrónica</option>
+              <option value="Periféricos">Periféricos</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Filtro por Precio -->
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="price">Ordenar por Precio</label>
+            <select id="priceSelect" name="price" class="form-control">
+              <option value="">Seleccionar Orden</option>
+              <option value="asc">Ascendente</option>
+              <option value="desc">Descendente</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Filtro por Límite -->
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="limit">Límite</label>
+              <select id="limitInput" name="limit" class="form-control">
+              <option value="">Seleccionar Limite</option>
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="5">5</option>
+              <option value="8">8</option>
+              <option value="10">10</option>
+
+            </select>
+          </div>
+        </div>
+
+        <!-- Filtro por Estado -->
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="status">Estado</label>
+            <select id="statusSelect" name="status" class="form-control">
+              <option value="">Seleccionar Estado</option>
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" id="clearFilters">Vaciar Filtros</button>
+
+      
+     
+    </form>
+ </div>
+
+
+<a class="btn_carrito" href="http://localhost:3000/views/carts/66ce1f9862b8d53ecb7198fe" target="_blank"><div class="btn_carrito" >Ver carrito</div></a>
+
+<div id="container" class="cont_cards" >
+
+  {{#each data}}
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body" >
+      <h5 class="card-title">{{this.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{this.category}}</h6>
+      <p class="card-text">status: {{this.status}}</p>
+      <p class="card-text">price: {{this.price}}</p>
+      <p class="card-text">code: {{this.code}}</p>
+      <div id="btn_agregar_carrito" class="agregar_carrito" onclick= "agregar_carrito('{{this._id}}')"></div>
+     
+          
+    </div>
+  </div>
+
+  {{/each}}
+
+</div>
+<div class="paginador">
+{{#if hasPrevPage}}
+    <a id="anterior" class="cont_paginador" href= "#" onclick="paginar({{prevPage}})"> Anterior </a>
+{{/if}}
+
+<a > {{currentPage}} de {{totalPages}} </a>
+
+{{#if hasNextPage}}
+    <a id="siguiente" class="cont_paginador" href= "#" onclick="paginar({{nextPage}})"> Siguiente </a>
+{{/if}}
+
+
+
+</div>
+
+ <!-- Bootstrap JS y dependencias -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param) || '';
+    }
+
+    function setSelectedValues() {
+      const category = getQueryParam('category');
+      const price = getQueryParam('sort');
+      const limit = getQueryParam('limit');
+      const status = getQueryParam('status');
+
+      document.getElementById('categorySelect').value = category;
+      document.getElementById('priceSelect').value = price;
+      document.getElementById('limitInput').value = limit;
+      document.getElementById('statusSelect').value = status;
+    }
+
+    document.getElementById('filterForm').addEventListener('change', function() {
+      const form = this;
+      const currentUrl = new URL(window.location.href);
+      const params = new URLSearchParams(currentUrl.search);
+
+      // Obtenemos los valores de los campos del formulario
+      const category = form.category.value;
+      const price = form.price.value;
+      const limit = form.limit.value;
+      const status = form.status.value;
+
+      // Actualizamos los parámetros de consulta
+      if (category) params.set('category', category);
+      if (price) params.set('sort', price);
+      if (limit) params.set('limit', limit);
+      if (status) params.set('status', status);
+
+      // Construimos la nueva URL con los parámetros actualizados
+      const newUrl = `${currentUrl.pathname}?${params.toString()}`;
+
+      // Redirigimos a la nueva URL
+      window.location.href = newUrl;
+    });
+
+    document.getElementById('clearFilters').addEventListener('click', function() {
+      const currentUrl = new URL(window.location.href);
+      const params = new URLSearchParams(currentUrl.search);
+
+      // Limpiamos los parámetros de consulta
+      params.delete('category');
+      params.delete('sort');
+      params.delete('limit');
+      params.delete('status');
+
+      // Construimos la nueva URL sin parámetros
+      const newUrl = `${currentUrl.pathname}?${params.toString()}`;
+
+      // Redirigimos a la URL sin parámetros
+      window.location.href = newUrl;
+    });
+
+    // Inicializar valores de los selects y campos de entrada con parámetros de URL
+    setSelectedValues();
+
+      function paginar(pagina){
+
+
+            function getQueryParam(param) {
+                // Crea un objeto URLSearchParams a partir de la URL actual
+                const urlParams = new URLSearchParams(window.location.search);
+                // Obtén el valor del parámetro solicitado
+                return urlParams.get(param);
+              }
+
+              // Llama a la función para obtener el valor de 'limit'
+              const limit = getQueryParam('limit');
+            
+              window.location.href = "/views/products?page="+pagina+"&limit="+limit;
+      }
+
+
+
+      function agregar_carrito (id){
+
+
+         
+          // Realizar la petición PUT
+          fetch('http://localhost:3000/api/carts/66ce1f9862b8d53ecb7198fe/products/'+id, {
+            method: 'PUT', // Método PUT
+            headers: {
+              'Content-Type': 'application/json', // Especifica que los datos se envían en formato JSON
+            },
+            body: null, // Convierte el objeto 'data' a una cadena JSON
+          }) 
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Error en la petición: ' + response.statusText);
+            }
+            alert("Producto agregado al carrito")
+          })
+     
+          .catch(error => {
+            console.error('Hubo un problema con la petición fetch:', error);
+          });
+
+      }
+
+  </script>
